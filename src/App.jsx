@@ -3,25 +3,51 @@ import React from 'react';
 
 export default function App() {
   return (
-    <>
-      {/* Фон-сетка */}
+    <div className="scanlines" style={{ minHeight: '100vh', backgroundColor: '#05070A', color: '#F3F4F6', fontFamily: 'Inter, sans-serif', position: 'relative' }}>
+      {/* Cyber Grid Background */}
       <div className="cyber-grid"></div>
-      {/* Основной контент */}
-      <div className="scanlines min-h-screen flex flex-col items-center justify-center" style={{ fontFamily: 'Inter, sans-serif', color: '#F3F4F6', backgroundColor: '#05070A' }}>
-        <h1 className="glitch-text text-4xl font-display font-bold mb-4" data-text="Google Flow & Veo | Нейровидео Студия | Доступ РФ" style={{ color: '#00F0FF', textAlign: 'center' }}>
-          Google Flow & Veo | Нейровидео Студия | Доступ РФ
+
+      {/* Hero Section */}
+      <section className="flex flex-col items-center justify-center pt-16 pb-8">
+        <div className="mb-4">
+          <span className="px-4 py-2 rounded-full border border-cyan-400 text-cyan-400 text-xs tracking-widest font-mono bg-black bg-opacity-40 shadow-lg">GOOGLE FLOW WORKSPACE ACCESS</span>
+        </div>
+        <h1 className="text-4xl md:text-5xl font-bold font-display text-center mb-2" style={{ color: '#00F0FF', textShadow: '0 0 8px #00F0FF' }}>
+          Платформа Нейровидео<br />
+          <span style={{ color: '#00F0FF', fontSize: '1.2em', letterSpacing: '2px' }}>GOOGLE FLOW</span>
         </h1>
-        <p className="text-lg font-sans mb-8" style={{ color: '#8B5CF6', textAlign: 'center' }}>
-          Купить доступ к Google Flow и Veo. Платформа для создания нейровидео.<br />
-          25000 кредитов. Генерация персонажей и монтаж без зарубежных карт.
+        <div className="text-lg text-center mb-2">
+          &amp; Powered by <span style={{ color: '#8B5CF6', fontWeight: 'bold' }}>Veo 3</span>
+        </div>
+        <div className="mt-4 mb-6">
+          <span className="px-6 py-3 rounded-xl bg-black border-2 border-green-400 text-green-400 text-xl font-bold shadow-lg">+ 25,000 FLOW КРЕДИТОВ</span>
+        </div>
+      </section>
+
+      {/* Info Section */}
+      <section className="max-w-2xl mx-auto bg-black bg-opacity-60 rounded-2xl p-6 mb-8 shadow-xl border border-cyan-900">
+        <h2 className="text-xl font-bold mb-2 flex items-center gap-2">
+          <span role="img" aria-label="info" className="text-cyan-400">🟣</span> Что такое Flow?
+        </h2>
+        <p className="text-base mb-2">
+          Это не просто генератор, это профессиональная среда для создания Нейровидео.<br />
+          Сохраняйте персонажей между сценариями, стройте таймлайн, редактируйте кадры.<br />
         </p>
-        {/* Пример блока с картинкой (замените src на ваш файл) */}
-        <img src="/11.jpeg" alt="Demo" className="rounded-xl shadow-lg mb-6" style={{ maxWidth: '320px' }} />
-        {/* Пример видео (замените src на ваш файл) */}
-        <video src="/flow-demo.mp4.mp4" controls className="rounded-xl shadow-lg mb-6" style={{ maxWidth: '320px' }} />
-        {/* Кнопка */}
-        <a href="#" className="px-6 py-3 bg-brand-accent text-black font-bold rounded-lg shadow-lg hover:bg-brand-secondary transition">Купить доступ</a>
+        <p className="text-base">
+          Вы получаете прямой доступ к Google Labs с балансом 25 000 кредитов. Без лишних ограничений.
+        </p>
+      </section>
+
+      {/* Demo Image & Video */}
+      <section className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
+        <img src="/11.jpeg" alt="Demo" className="rounded-xl shadow-lg" style={{ maxWidth: '320px' }} />
+        <video src="/flow-demo.mp4.mp4" controls className="rounded-xl shadow-lg" style={{ maxWidth: '320px' }} />
+      </section>
+
+      {/* CTA Button */}
+      <div className="flex justify-center mb-12">
+        <a href="#" className="px-8 py-4 bg-cyan-400 text-black font-bold rounded-lg shadow-lg hover:bg-cyan-300 transition text-xl">Купить доступ</a>
       </div>
-    </>
+    </div>
   );
 }
